@@ -1,0 +1,29 @@
+<!doctype html>
+<html  ng-app="app">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Startup</title>
+    <link href="https://cdn.alloyui.com/3.0.1/aui-css/css/bootstrap.min.css" rel="stylesheet"></link>
+    <script type="text/javascript" src="/webjars/jquery/3.3.1-1/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/angularjs/1.6.2/angular.min.js"></script>
+    <script type="text/javascript" src="/webjars/angularjs/1.6.2/angular-route.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/4.0.0-2/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+    <script src="js/contactController.js"></script>
+    <script src="js/loginController.js"></script>
+</head>
+<body ng-controller="mainController">
+
+
+
+<!-- MAIN CONTENT AND INJECTED VIEWS -->
+<div id="main">
+    <!-- angular templating -->
+    <!-- this is where content will be injected -->
+    <div ng-view></div>
+</div>
+
+</body>
+
+</html>

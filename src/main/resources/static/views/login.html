@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zaloguj sie!</title>
+    <script type="text/javascript" src="/webjars/jquery/3.3.1-1/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/angularjs/1.6.2/angular.min.js"></script>
+    <script type="text/javascript" src="/webjars/angularjs/1.6.2/angular-route.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/4.0.0-2/js/bootstrap.min.js"></script>
+</head>
+<body ng-controller="loginController">
+<header>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Klinika</a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#!/treatments"><i class="fa fa-shield"></i> Zabiegi</a></li>
+                <li><a href="#!/contact"><i class="fa fa-comment"></i> Kontakt</a></li>
+                <li><a href="#!/login"><i class="login-btn"></i> Zaloguj sie!</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<p>zaloguj sie!</p>
+<form  authentication-success-handler-ref="authSuccessHandler" ng-submit="login()" class="ng-cloak">
+    <div class="form-group">
+        <label for="username">Username:</label>
+        <input text="text" class="form-control" id="content" name="content"
+               ng-model="loginController.credentials.username"/>
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password"
+               ng-model="loginController.credentials.password"/>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</body>
+</html>
