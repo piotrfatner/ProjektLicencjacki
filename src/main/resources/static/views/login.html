@@ -8,7 +8,7 @@
     <script type="text/javascript" src="/webjars/angularjs/1.6.2/angular-route.js"></script>
     <script type="text/javascript" src="/webjars/bootstrap/4.0.0-2/js/bootstrap.min.js"></script>
 </head>
-<body ng-controller="loginController">
+<body ng-controller="loginController as loginController">
 <header>
     <nav class="navbar navbar-default">
         <div class="container">
@@ -28,11 +28,11 @@
 <form  authentication-success-handler-ref="authSuccessHandler" ng-submit="login()" class="ng-cloak">
     <div class="form-group">
         <label for="username">Username:</label>
-        <input text="text" class="form-control" id="content" name="content"
-               ng-model="loginController.credentials.username"/>
+        <input text="text" class="form-control" id="username" name="username"
+               ng-model="username"/>
         <label for="password">Password</label>
         <input type="password" class="form-control" id="password" name="password"
-               ng-model="loginController.credentials.password"/>
+               ng-model="password"/>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>

@@ -3,7 +3,10 @@ app.controller('loginController', function($scope,$http) {
     var self = this;
     $scope.login = function () {
         console.log("click!");
-        $http.get('/login2').then(function(response) {
+        console.log($scope.username+"   "+$scope.password);
+        $http.get('/login2' ,{headers : { authorization : "Basic "
+        + btoa($scope.username
+            + ":" + $scope.password)}}).then(function(response) {
             console.log(response.data);
         }).catch(function (reason) {  console.log("Not valid!");
             console.log(reason)})};
